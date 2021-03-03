@@ -1,5 +1,9 @@
 # CookingApp
 
+![Screen Shot 2021-03-03 at 4 31 34 PM](https://user-images.githubusercontent.com/43690415/109875171-18c03b80-7c3e-11eb-8748-b877083b94be.png)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
 ## Development server
