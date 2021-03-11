@@ -6,15 +6,13 @@ import { DataStorageService } from '../shared/data-storage.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   constructor(private dataStorageService: DataStorageService) {}
-
-  ngOnInit(): void {}
 
   onSaveData() {
     this.dataStorageService.storeRecipes();
   }
   onFetchData() {
-    this.dataStorageService.fetchRecipe();
+    this.dataStorageService.fetchRecipe().subscribe();
   }
 }

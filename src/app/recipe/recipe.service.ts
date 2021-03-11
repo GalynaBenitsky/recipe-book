@@ -50,6 +50,9 @@ export class RecipeService {
       ]
     ),
   ];
+
+  //private recipes: Recipe[] = [];
+
   constructor(private slService: ShoppingListService) {}
 
   setRecipes(recipes: Recipe[]) {
@@ -64,7 +67,7 @@ export class RecipeService {
     return this.recipes[index];
   }
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
-    this.slService.addIngredient(ingredients);
+    this.slService.addIngredients(ingredients);
   }
   addRecipe(recipe: Recipe) {
     this.recipes.push(recipe);

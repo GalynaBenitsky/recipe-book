@@ -16,16 +16,16 @@ export class ShoppingListService {
   getIngredient(index: number) {
     return this.ingredients[index];
   }
-  addIngredients(ingredient: Ingredient) {
+  addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
     this.ingredientsChange.next(this.ingredients.slice());
   }
-  addIngredient(ingredients: Ingredient[]) {
-    for (let ingredient of ingredients) {
-      this.addIngredients(ingredient);
-    }
-    //this.ingredients.push(...ingredients);
-    //this.ingredientsChange.next(this.ingredients.slice());
+  addIngredients(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients) {
+    //   this.addIngredients(ingredient);
+    // }
+    this.ingredients.push(...ingredients);
+    this.ingredientsChange.next(this.ingredients.slice());
   }
   updateIngerient(index: number, newIngredient: Ingredient) {
     this.ingredients[index] = newIngredient;

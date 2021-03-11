@@ -64,14 +64,14 @@ export class RecipeEditComponent implements OnInit {
 
   private initForm() {
     let recipeName = '';
-    let recipeImageURL = '';
+    let recipeImgURL = '';
     let recipeDescription = '';
     let recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);
       recipeName = recipe.name;
-      recipeImageURL = recipe.imgURL;
+      recipeImgURL = recipe.imgURL;
       recipeDescription = recipe.description;
       if (recipe['ingredients']) {
         for (let ingredient of recipe.ingredients) {
@@ -89,7 +89,7 @@ export class RecipeEditComponent implements OnInit {
     }
     this.recipeForm = new FormGroup({
       name: new FormControl(recipeName, Validators.required),
-      imageURL: new FormControl(recipeImageURL, Validators.required),
+      imgURL: new FormControl(recipeImgURL, Validators.required),
       description: new FormControl(recipeDescription, Validators.required),
       ingredients: recipeIngredients,
     });

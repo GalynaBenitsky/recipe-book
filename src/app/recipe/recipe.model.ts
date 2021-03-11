@@ -1,5 +1,4 @@
 import { Ingredient } from '../shared/ingredient.model';
-import { RecipeComponent } from './recipe.component';
 
 export class Recipe {
   public name: string;

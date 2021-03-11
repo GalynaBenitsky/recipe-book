@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <img [src]="recipe.imgURL" alt="recipe.name" class="img-responsive" />
+    <img [src]="recipe.imgURL" alt="{{ recipe.name }}" class="img-responsive" />
   </div>
 </div>
 <div class="row">
@@ -12,7 +12,7 @@
   <div class="col-xs-12">
     <div class="btn-group" appDropdown>
       <button class="btn btn-primary dropdown-toggle">
-        Mange recipe <span class="caret"></span>
+        Manage recipe <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
         <li>
