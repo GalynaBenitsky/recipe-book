@@ -39,7 +39,7 @@ import { RecipeService } from './recipe/recipe.service';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
